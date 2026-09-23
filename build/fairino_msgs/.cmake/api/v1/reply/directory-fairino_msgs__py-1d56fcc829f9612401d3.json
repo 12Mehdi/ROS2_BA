@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "fairino_msgs__py",
+		"source" : "/home/falcon1/Bachelorarbeit/Coding/ROS2_BA/build/fairino_msgs/fairino_msgs__py"
+	}
+}

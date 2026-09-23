@@ -1,0 +1,12 @@
+controller_manager:
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+    gripper_position_controller:
+      type: position_controllers/GripperActionController
+      
+gripper_position_controller:
+  ros__parameters:
+    default: true
+    joint: left_finger_joint
+    use_effort_interface: true
+    use_speed_interface: true

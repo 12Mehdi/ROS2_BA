@@ -1,0 +1,49 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Configuring done (0.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/build/schnuck_fr_description
+-- Install configuration: ""
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/config
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/config/schnuck_gripper_controllers.yaml
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/meshes
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/meshes/visual
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/meshes/visual/schnuck_claw.dae
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/meshes/collision
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/meshes/collision/schnuck_base.stl
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/meshes/collision/schnuck_collision.stl
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/meshes/collision/schnuck_finger.stl
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/rviz
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/rviz/view_urdf.rviz
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/urdf
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/urdf/schnuck_gripper.xacro
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/urdf/schnuck_gripper_collision.xacro
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/urdf/schnuck_gripper_hardware.xacro
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/urdf/schnuck_gripper.ros2_control.xacro
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/ament_index/resource_index/package_run_dependencies/schnuck_fr_description
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/ament_index/resource_index/parent_prefix_path/schnuck_fr_description
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/environment/ament_prefix_path.sh
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/environment/ament_prefix_path.dsv
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/environment/path.sh
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/environment/path.dsv
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/local_setup.bash
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/local_setup.sh
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/local_setup.zsh
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/local_setup.dsv
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/package.dsv
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/ament_index/resource_index/packages/schnuck_fr_description
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/cmake/schnuck_fr_descriptionConfig.cmake
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/cmake/schnuck_fr_descriptionConfig-version.cmake
+-- Installing: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/schnuck_fr_description/share/schnuck_fr_description/package.xml

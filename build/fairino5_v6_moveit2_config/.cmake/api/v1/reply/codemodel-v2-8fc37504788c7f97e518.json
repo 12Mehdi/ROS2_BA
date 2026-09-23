@@ -1,0 +1,70 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-73c29dd0b3cf664c29d3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "fairino5_v6_moveit2_config",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "fairino5_v6_moveit2_config_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fairino5_v6_moveit2_config_uninstall-c85172824c9dbfb3753a.json",
+					"name" : "fairino5_v6_moveit2_config_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-8b1e6066ed946d77a3cf.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/falcon1/Bachelorarbeit/Coding/ROS2_BA/build/fairino5_v6_moveit2_config",
+		"source" : "/home/falcon1/Bachelorarbeit/Coding/ROS2_BA/src/frcobot_ros2/fairino5_v6_moveit2_config"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

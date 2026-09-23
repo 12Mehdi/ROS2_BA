@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- Include ros2_control macro for gripper -->
+  <!--xacro:include filename="$(find schnuck_fr_description)/urdf/schnuck_gripper.ros2_control.xacro" /-->
+
+  <!-- ===================== -->
+  <!-- Gripper macro -->
+  <!-- ===================== -->
+  <xacro:macro name="gripper" params="parent">
+
+    <!-- Base link -->
+    <link name="gripper_base_link">
+      <inertial>
+        <origin xyz="0.009 0.001 0.047"/>
+        <mass value="0.078"/>
+        <inertia ixx="0.002176" ixy="-0.000078" ixz="0.000214" 
+                 iyy="0.002057" iyz="0.000029" 
+                 izz="0.001833"/>
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh filename="package://schnuck_fr_description/meshes/collision/schnuck_collision.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="gray">
+          <color rgba="0.6 0.6 0.6 1"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://schnuck_fr_description/meshes/collision/schnuck_collision.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="gripper_mount_joint" type="fixed">
+      <parent link="${parent}"/>
+      <child link="gripper_base_link"/>
+      <origin xyz="0 0 0.105" rpy="0 0 ${-pi/2}"/>   <!--  -Y untuk ke bawah -->
+      <axis xyz="0 0 0"/>
+    </joint>
+
+  </xacro:macro>
+
+</robot>

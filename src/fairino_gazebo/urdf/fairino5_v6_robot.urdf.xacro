@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="fairino5_v6_robot">
+
+    <!-- Import macro files -->
+    <xacro:include filename="$(find fairino_gazebo)/urdf/fairino5_v6_macro.xacro"/>
+    <xacro:include filename="$(find fairino_gazebo)/urdf/fairino5_v6_robot.ros2_control.xacro"/>
+
+    <!-- Read additional arguments -->
+    <xacro:arg name="initial_positions_file" default="$(find fairino_gazebo)/config/initial_positions.yaml"/>
+    <xacro:arg name="mode" default="gazebo"/>
+    <xacro:arg name="prefix" default=""/>
+    <!-- ADD: controllers YAML path dari launch -->
+    <xacro:arg name="simulation_controllers" default="$(find fairino_gazebo)/config/ros2_controllers.yaml"/>
+
+    <!-- ros2_control macro -->
+    <xacro:fairino5_v6_robot_ros2_control
+        name="fairino_fr5_robot"
+        mode="$(arg mode)"
+        initial_positions_file="$(arg initial_positions_file)"/>
+
+    <!-- Kinematika/visual robot -->
+    <xacro:fairino_fr5_robot 
+        prefix="$(arg prefix)"/>
+
+    <xacro:include filename="$(find fairino_gazebo)/urdf/depth_camera.xacro"/>
+    <xacro:depth_camera 
+        parent="$(arg prefix)wrist3_link">
+    </xacro:depth_camera>
+
+    <xacro:include filename="$(find schnuck_fr_description)/urdf/schnuck_gripper.xacro"/>
+    <xacro:gripper 
+        parent="$(arg prefix)wrist3_link">
+    </xacro:gripper>
+
+
+    <!-- ========================================================= -->
+    <!-- Added environment: Tisch + cylinders + re-root base_link   -->
+    <!-- ========================================================= -->
+
+    <!-- ===== Added cylinder link under base_link (actually parent of base_link) ===== -->
+    <link name="zylinder_base">
+        <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.1"/>
+        <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4"/>
+        </inertial>
+
+        <collision name="zylinder_collision">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <cylinder radius="0.16" length="0.353"/>
+        </geometry>
+        </collision>
+
+        <visual name="zylinder_visual">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <cylinder radius="0.16" length="0.353"/>
+        </geometry>
+        <material name="zylinder_mat">
+            <color rgba="0.7 0.7 0.7 0.9"/>
+        </material>
+        </visual>
+    </link>
+
+    <joint name="base_to_zylinder" type="fixed">
+        <parent link="zylinder_base"/>
+        <child link="base_link"/>
+        <origin xyz="0 0 0.16" rpy="0 0 3.92699"/>
+    </joint>
+    <!-- ===== End added cylinder ===== -->
+
+    <!-- ===== Added cylinder link  ===== -->
+    <link name="zylinder_1_link">
+        <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.1"/>
+        <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4"/>
+        </inertial>
+
+        <collision name="zylinder1_collision">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <cylinder radius="0.16" length="0.353"/>
+        </geometry>
+        </collision>
+
+        <visual name="zylinder1_visual">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <cylinder radius="0.16" length="0.353"/>
+        </geometry>
+        <material name="zylinder1_mat">
+            <color rgba="0.7 0.7 0.7 0.9"/>
+        </material>
+        </visual>
+    </link>
+
+    <link name="zylinder_2_link">
+        <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.1"/>
+        <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4"/>
+        </inertial>
+
+        <collision name="zylinder2_collision">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <cylinder radius="0.16" length="0.353"/>
+        </geometry>
+        </collision>
+
+        <visual name="zylinder2_visual">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <cylinder radius="0.16" length="0.353"/>
+        </geometry>
+        <material name="zylinder2_mat">
+            <color rgba="0.7 0.7 0.7 0.9"/>
+        </material>
+        </visual>
+    </link>
+
+    <link name="zylinder_3_link">
+        <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.1"/>
+        <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4"/>
+        </inertial>
+
+        <collision name="zylinder3_collision">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <cylinder radius="0.16" length="0.353"/>
+        </geometry>
+        </collision>
+
+        <visual name="zylinder3_visual">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <cylinder radius="0.16" length="0.353"/>
+        </geometry>
+        <material name="zylinder3_mat">
+            <color rgba="0.7 0.7 0.7 0.9"/>
+        </material>
+        </visual>
+    </link>
+
+    <link name="zylinder_4_link">
+        <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.1"/>
+        <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4"/>
+        </inertial>
+
+        <collision name="zylinder4_collision">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <cylinder radius="0.16" length="0.353"/>
+        </geometry>
+        </collision>
+
+        <visual name="zylinder4_visual">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <cylinder radius="0.16" length="0.353"/>
+        </geometry>
+        <material name="zylinder4_mat">
+            <color rgba="0.7 0.7 0.7 0.9"/>
+        </material>
+        </visual>
+    </link>
+
+    <link name="zylinder_5_link">
+        <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.1"/>
+        <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4"/>
+        </inertial>
+
+        <collision name="zylinder5_collision">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <cylinder radius="0.16" length="0.353"/>
+        </geometry>
+        </collision>
+
+        <visual name="zylinder5_visual">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <cylinder radius="0.16" length="0.353"/>
+        </geometry>
+        <material name="zylinder5_mat">
+            <color rgba="0.7 0.7 0.7 0.9"/>
+        </material>
+        </visual>
+    </link>
+    <!-- ===== End added cylinders ===== -->
+
+    <!-- ===== Added Tisch link under zylinder_base ===== -->
+    <link name="Tisch">
+
+
+        <collision name="tisch_collision">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <box size="3.35 1.52 1"/>
+        </geometry>
+        </collision>
+
+        <visual name="tisch_visual">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <box size="3.35 1.52 1"/>
+        </geometry>
+        <material name="tisch_mat">
+            <color rgba="0.7 0.7 0.7 0.8"/>
+        </material>
+        </visual>
+    </link>
+
+    <joint name="Tisch_Joint" type="fixed">
+        <parent link="Tisch"/>
+        <child link="zylinder_base"/>
+        <origin xyz="0 -0.6 0.665" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="Tisch_Zylinder1_Joint" type="fixed">
+        <parent link="Tisch"/>
+        <child link="zylinder_1_link"/>
+        <origin xyz="1.5 -0.6 0.675" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="Tisch_Zylinder2_Joint" type="fixed">
+        <parent link="Tisch"/>
+        <child link="zylinder_2_link"/>
+        <origin xyz="-1.5 -0.6 0.675" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="Tisch_Zylinder3_Joint" type="fixed">
+        <parent link="Tisch"/>
+        <child link="zylinder_3_link"/>
+        <origin xyz="0 0.6 0.675" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="Tisch_Zylinder4_Joint" type="fixed">
+        <parent link="Tisch"/>
+        <child link="zylinder_4_link"/>
+        <origin xyz="1.5 0.6 0.675" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="Tisch_Zylinder5_Joint" type="fixed">
+        <parent link="Tisch"/>
+        <child link="zylinder_5_link"/>
+        <origin xyz="-1.5 0.6 0.675" rpy="0 0 0"/>
+    </joint>
+    <!-- ===== End added Tisch ===== -->
+
+    <!-- ========================================================= -->
+    <!-- End added environment                                      -->
+    <!-- ========================================================= -->
+
+    <!-- Gazebo plugin -->
+    <gazebo>
+        <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+        <parameters>$(arg simulation_controllers)</parameters>
+        <ros>
+            <namespace>/</namespace>
+        </ros>
+        </plugin>
+
+        <!--<plugin name="gazebo_ros" filename="libgazebo_ros_init.so"/>-->
+    </gazebo>  
+
+</robot>

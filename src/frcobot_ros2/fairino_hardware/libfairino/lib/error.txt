@@ -1,0 +1,5 @@
+cd /home/ubuntu/fairino_ws/src/frcobot_ros2/fairino_hardware/libfairino/lib
+sudo rm -f libfairino.so libfairino.so.2
+sudo ln -s libfairino.so.2.3.0 libfairino.so.2
+sudo ln -s libfairino.so.2       libfairino.so
+ls -l

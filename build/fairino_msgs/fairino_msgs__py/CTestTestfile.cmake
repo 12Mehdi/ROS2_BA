@@ -1,0 +1,6 @@
+# CMake generated Testfile for 
+# Source directory: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/build/fairino_msgs/fairino_msgs__py
+# Build directory: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/build/fairino_msgs/fairino_msgs__py
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
