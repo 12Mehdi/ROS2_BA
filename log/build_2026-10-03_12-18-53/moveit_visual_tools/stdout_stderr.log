@@ -1,0 +1,24 @@
+-- Found moveit_common: 2.12.4 (/opt/ros/jazzy/share/moveit_common/cmake)
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0mmoveit_visual_tools: You did not request a specific build type: Choosing 'Release' for maximum performance[0m
+-- Found ament_index_cpp: 1.8.4 (/opt/ros/jazzy/share/ament_index_cpp/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0")  
+[31mCMake Error at CMakeLists.txt:11 (find_package):
+  By not providing "Findgeometric_shapes.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "geometric_shapes", but CMake did not find one.
+
+  Could not find a package configuration file provided by "geometric_shapes"
+  with any of the following names:
+
+    geometric_shapesConfig.cmake
+    geometric_shapes-config.cmake
+
+  Add the installation prefix of "geometric_shapes" to CMAKE_PREFIX_PATH or
+  set "geometric_shapes_DIR" to a directory containing one of the above
+  files.  If "geometric_shapes" provides a separate development package or
+  SDK, be sure it has been installed.
+
+[0m
+-- Configuring incomplete, errors occurred!

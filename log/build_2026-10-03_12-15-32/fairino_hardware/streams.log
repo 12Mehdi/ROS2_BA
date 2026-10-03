@@ -1,0 +1,29 @@
+[0.006s] Invoking command in '/home/falcon1/Desktop/ROS2_BA/build/fairino_hardware': AMENT_PREFIX_PATH=/home/falcon1/Desktop/ROS2_BA/install/fairino_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/falcon1/Desktop/ROS2_BA/install/fairino_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/falcon1/Desktop/ROS2_BA/install/fairino_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/falcon1/Desktop/ROS2_BA/install/fairino_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/falcon1/Desktop/ROS2_BA/src/frcobot_ros2/fairino_hardware -DCMAKE_INSTALL_PREFIX=/home/falcon1/Desktop/ROS2_BA/install/fairino_hardware
+[0.015s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.166s] -- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.185s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.191s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.199s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.207s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.243s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.244s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.283s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.324s] -- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.339s] [31mCMake Error at CMakeLists.txt:16 (find_package):
+[0.339s]   By not providing "Findhardware_interface.cmake" in CMAKE_MODULE_PATH this
+[0.339s]   project has asked CMake to find a package configuration file provided by
+[0.340s]   "hardware_interface", but CMake did not find one.
+[0.340s] 
+[0.340s]   Could not find a package configuration file provided by
+[0.340s]   "hardware_interface" with any of the following names:
+[0.340s] 
+[0.340s]     hardware_interfaceConfig.cmake
+[0.340s]     hardware_interface-config.cmake
+[0.340s] 
+[0.340s]   Add the installation prefix of "hardware_interface" to CMAKE_PREFIX_PATH or
+[0.340s]   set "hardware_interface_DIR" to a directory containing one of the above
+[0.340s]   files.  If "hardware_interface" provides a separate development package or
+[0.340s]   SDK, be sure it has been installed.
+[0.340s] 
+[0.340s] [0m
+[0.340s] -- Configuring incomplete, errors occurred!

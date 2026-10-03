@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/falcon1/Bachelorarbeit/Coding/ROS2_BA/build/fairino_msgs/rosidl_generator_rs/fairino_msgs/rust/Cargo.toml"
-  "/home/falcon1/Bachelorarbeit/Coding/ROS2_BA/build/fairino_msgs/rosidl_generator_rs/fairino_msgs/rust/build.rs"
-  "/home/falcon1/Bachelorarbeit/Coding/ROS2_BA/build/fairino_msgs/rosidl_generator_rs/fairino_msgs/rust/src/lib.rs"
+  "/home/falcon1/Desktop/ROS2_BA/build/fairino_msgs/rosidl_generator_rs/fairino_msgs/rust/Cargo.toml"
+  "/home/falcon1/Desktop/ROS2_BA/build/fairino_msgs/rosidl_generator_rs/fairino_msgs/rust/build.rs"
+  "/home/falcon1/Desktop/ROS2_BA/build/fairino_msgs/rosidl_generator_rs/fairino_msgs/rust/src/lib.rs"
   "CMakeFiles/fairino_msgs__rs"
 )
 

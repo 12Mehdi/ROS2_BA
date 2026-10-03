@@ -1,10 +1,10 @@
 {
   "package_name": "fairino_msgs",
-  "output_dir": "/home/falcon1/Bachelorarbeit/Coding/ROS2_BA/build/fairino_msgs/rosidl_generator_type_description/fairino_msgs",
+  "output_dir": "/home/falcon1/Desktop/ROS2_BA/build/fairino_msgs/rosidl_generator_type_description/fairino_msgs",
   "idl_tuples": [
-    "/home/falcon1/Bachelorarbeit/Coding/ROS2_BA/build/fairino_msgs/rosidl_adapter/fairino_msgs:srv/RemoteCmdInterface.idl",
-    "/home/falcon1/Bachelorarbeit/Coding/ROS2_BA/build/fairino_msgs/rosidl_adapter/fairino_msgs:srv/RemoteScriptContent.idl",
-    "/home/falcon1/Bachelorarbeit/Coding/ROS2_BA/build/fairino_msgs/rosidl_adapter/fairino_msgs:msg/RobotNonrtState.idl"
+    "/home/falcon1/Desktop/ROS2_BA/build/fairino_msgs/rosidl_adapter/fairino_msgs:srv/RemoteCmdInterface.idl",
+    "/home/falcon1/Desktop/ROS2_BA/build/fairino_msgs/rosidl_adapter/fairino_msgs:srv/RemoteScriptContent.idl",
+    "/home/falcon1/Desktop/ROS2_BA/build/fairino_msgs/rosidl_adapter/fairino_msgs:msg/RobotNonrtState.idl"
   ],
   "include_paths": [
     "service_msgs:/opt/ros/jazzy/share/service_msgs",

@@ -1,0 +1,50 @@
+[0.013s] Invoking command in '/home/falcon1/Desktop/ROS2_BA/build/rviz_visual_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/falcon1/Desktop/ROS2_BA/src/rviz_visual_tools -DCMAKE_INSTALL_PREFIX=/home/falcon1/Desktop/ROS2_BA/install/rviz_visual_tools
+[0.024s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.167s] -- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.186s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.192s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.199s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.208s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.249s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.250s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.296s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.345s] -- Found rclcpp_components: 28.1.22 (/opt/ros/jazzy/share/rclcpp_components/cmake)
+[0.364s] -- Found rviz_ogre_vendor: 14.1.23 (/opt/ros/jazzy/share/rviz_ogre_vendor/cmake)
+[0.364s] -- Setting OGRE_DIR to: '/opt/ros/jazzy/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'
+[0.365s] -- Found OGRE
+[0.365s] --   static     : OFF
+[0.365s] --   components : MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume
+[0.365s] --   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[0.365s] --   media      : /opt/ros/jazzy/opt/rviz_ogre_vendor/share/OGRE/Media
+[0.365s] -- OGRE_LIBRARIES: OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain
+[0.365s] -- OGRE_LIBRARY_DIRS: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib
+[0.365s] -- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[0.365s] -- OGRE_PLUGIN_DIR: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/OGRE
+[0.365s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[0.365s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[0.365s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[0.365s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[0.436s] -- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[0.475s] -- Found shape_msgs: 5.3.8 (/opt/ros/jazzy/share/shape_msgs/cmake)
+[0.485s] -- Found visualization_msgs: 5.3.8 (/opt/ros/jazzy/share/visualization_msgs/cmake)
+[0.506s] -- Found trajectory_msgs: 5.3.8 (/opt/ros/jazzy/share/trajectory_msgs/cmake)
+[0.520s] -- Found eigen3_cmake_module: 0.3.1 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[0.529s] [31mCMake Error at CMakeLists.txt:29 (find_package):
+[0.529s]   By not providing "Findeigen_stl_containers.cmake" in CMAKE_MODULE_PATH this
+[0.529s]   project has asked CMake to find a package configuration file provided by
+[0.529s]   "eigen_stl_containers", but CMake did not find one.
+[0.529s] 
+[0.529s]   Could not find a package configuration file provided by
+[0.529s]   "eigen_stl_containers" with any of the following names:
+[0.529s] 
+[0.529s]     eigen_stl_containersConfig.cmake
+[0.529s]     eigen_stl_containers-config.cmake
+[0.529s] 
+[0.529s]   Add the installation prefix of "eigen_stl_containers" to CMAKE_PREFIX_PATH
+[0.529s]   or set "eigen_stl_containers_DIR" to a directory containing one of the
+[0.529s]   above files.  If "eigen_stl_containers" provides a separate development
+[0.529s]   package or SDK, be sure it has been installed.
+[0.529s] 
+[0.529s] [0m
+[0.529s] -- Configuring incomplete, errors occurred!
+[0.534s] Invoked command in '/home/falcon1/Desktop/ROS2_BA/build/rviz_visual_tools' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/falcon1/Desktop/ROS2_BA/src/rviz_visual_tools -DCMAKE_INSTALL_PREFIX=/home/falcon1/Desktop/ROS2_BA/install/rviz_visual_tools

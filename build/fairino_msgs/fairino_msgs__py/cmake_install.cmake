@@ -1,8 +1,8 @@
-# Install script for directory: /home/falcon1/Bachelorarbeit/Coding/ROS2_BA/build/fairino_msgs/fairino_msgs__py
+# Install script for directory: /home/falcon1/Desktop/ROS2_BA/build/fairino_msgs/fairino_msgs__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/falcon1/Bachelorarbeit/Coding/ROS2_BA/install/fairino_msgs")
+  set(CMAKE_INSTALL_PREFIX "/home/falcon1/Desktop/ROS2_BA/install/fairino_msgs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

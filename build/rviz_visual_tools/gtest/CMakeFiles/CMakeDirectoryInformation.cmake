@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/opt/ros/jazzy/src/gtest_vendor")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/falcon1/Bachelorarbeit/Coding/ROS2_BA/build/rviz_visual_tools")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/falcon1/Desktop/ROS2_BA/build/rviz_visual_tools")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

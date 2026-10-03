@@ -1,0 +1,34 @@
+[0.016s] Invoking command in '/home/falcon1/Desktop/ROS2_BA/build/moveit_visual_tools': AMENT_PREFIX_PATH=/home/falcon1/Desktop/ROS2_BA/install/rviz_visual_tools:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/falcon1/Desktop/ROS2_BA/install/rviz_visual_tools:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/falcon1/Desktop/ROS2_BA/install/rviz_visual_tools/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/falcon1/Desktop/ROS2_BA/src/moveit_visual_tools -DCMAKE_INSTALL_PREFIX=/home/falcon1/Desktop/ROS2_BA/install/moveit_visual_tools
+[0.026s] -- Found moveit_common: 2.12.4 (/opt/ros/jazzy/share/moveit_common/cmake)
+[0.027s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.202s] [0mmoveit_visual_tools: You did not request a specific build type: Choosing 'Release' for maximum performance[0m
+[0.202s] -- Found ament_index_cpp: 1.8.4 (/opt/ros/jazzy/share/ament_index_cpp/cmake)
+[0.207s] -- Found geometric_shapes: 2.3.4 (/opt/ros/jazzy/share/geometric_shapes/cmake)
+[0.259s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.270s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.282s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.295s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.380s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.383s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.443s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.455s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.470s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.581s] -- Found graph_msgs: 0.2.1 (/opt/ros/jazzy/share/graph_msgs/cmake)
+[0.600s] [31mCMake Error at CMakeLists.txt:14 (find_package):
+[0.601s]   By not providing "Findmoveit_core.cmake" in CMAKE_MODULE_PATH this project
+[0.601s]   has asked CMake to find a package configuration file provided by
+[0.601s]   "moveit_core", but CMake did not find one.
+[0.601s] 
+[0.601s]   Could not find a package configuration file provided by "moveit_core" with
+[0.601s]   any of the following names:
+[0.601s] 
+[0.601s]     moveit_coreConfig.cmake
+[0.601s]     moveit_core-config.cmake
+[0.601s] 
+[0.601s]   Add the installation prefix of "moveit_core" to CMAKE_PREFIX_PATH or set
+[0.601s]   "moveit_core_DIR" to a directory containing one of the above files.  If
+[0.601s]   "moveit_core" provides a separate development package or SDK, be sure it
+[0.601s]   has been installed.
+[0.601s] 
+[0.601s] [0m
+[0.601s] -- Configuring incomplete, errors occurred!

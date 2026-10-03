@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DQT_NO_KEYWORDS
 
-CXX_INCLUDES = -I/home/falcon1/Bachelorarbeit/Coding/ROS2_BA/build/rviz_visual_tools/gtest -I/opt/ros/jazzy/src/gtest_vendor -I/home/falcon1/Bachelorarbeit/Coding/ROS2_BA/build/rviz_visual_tools/gtest/gtest_autogen/include -I/home/falcon1/Bachelorarbeit/Coding/ROS2_BA/src/rviz_visual_tools/include -I/opt/ros/jazzy/src/gtest_vendor/. -isystem /opt/ros/jazzy/src/gtest_vendor/include
+CXX_INCLUDES = -I/home/falcon1/Desktop/ROS2_BA/build/rviz_visual_tools/gtest -I/opt/ros/jazzy/src/gtest_vendor -I/home/falcon1/Desktop/ROS2_BA/build/rviz_visual_tools/gtest/gtest_autogen/include -I/home/falcon1/Desktop/ROS2_BA/src/rviz_visual_tools/include -I/opt/ros/jazzy/src/gtest_vendor/. -isystem /opt/ros/jazzy/src/gtest_vendor/include
 
 CXX_FLAGS = -std=gnu++14 -fPIC -Wno-missing-field-initializers -W -Wall -Wextra -Wwrite-strings -Wunreachable-code -Wpointer-arith -Winit-self -Wredundant-decls -Wno-unused-parameter -Wno-unused-function -Wno-null-dereference
 

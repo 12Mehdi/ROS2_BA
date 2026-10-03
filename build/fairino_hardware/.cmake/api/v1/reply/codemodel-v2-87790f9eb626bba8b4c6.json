@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-734abad2c1d6f53fc6a8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "fairino_hardware",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "fairino_hardware::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fairino_hardware-Release-16f7fcf6b5a9178f1813.json",
+					"name" : "fairino_hardware",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "fairino_hardware_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fairino_hardware_uninstall-Release-ceb153fe7a525b333735.json",
+					"name" : "fairino_hardware_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ros2_cmd_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ros2_cmd_server-Release-1f0f277b1ae603c79cf0.json",
+					"name" : "ros2_cmd_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "srv_test_client::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-srv_test_client-Release-4cf38936ed3ceb0bc7d7.json",
+					"name" : "srv_test_client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-9a57a40e638c220fee74.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/falcon1/Desktop/ROS2_BA/build/fairino_hardware",
+		"source" : "/home/falcon1/Desktop/ROS2_BA/src/frcobot_ros2/fairino_hardware"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

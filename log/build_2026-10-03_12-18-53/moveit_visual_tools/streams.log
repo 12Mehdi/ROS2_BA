@@ -1,0 +1,26 @@
+[0.006s] Invoking command in '/home/falcon1/Desktop/ROS2_BA/build/moveit_visual_tools': AMENT_PREFIX_PATH=/home/falcon1/Desktop/ROS2_BA/install/rviz_visual_tools:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/falcon1/Desktop/ROS2_BA/install/rviz_visual_tools:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/falcon1/Desktop/ROS2_BA/install/rviz_visual_tools/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/falcon1/Desktop/ROS2_BA/src/moveit_visual_tools -DCMAKE_INSTALL_PREFIX=/home/falcon1/Desktop/ROS2_BA/install/moveit_visual_tools
+[0.018s] -- Found moveit_common: 2.12.4 (/opt/ros/jazzy/share/moveit_common/cmake)
+[0.021s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.132s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.265s] [0mmoveit_visual_tools: You did not request a specific build type: Choosing 'Release' for maximum performance[0m
+[0.267s] -- Found ament_index_cpp: 1.8.4 (/opt/ros/jazzy/share/ament_index_cpp/cmake)
+[0.277s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0")  
+[0.291s] [31mCMake Error at CMakeLists.txt:11 (find_package):
+[0.291s]   By not providing "Findgeometric_shapes.cmake" in CMAKE_MODULE_PATH this
+[0.291s]   project has asked CMake to find a package configuration file provided by
+[0.291s]   "geometric_shapes", but CMake did not find one.
+[0.291s] 
+[0.291s]   Could not find a package configuration file provided by "geometric_shapes"
+[0.291s]   with any of the following names:
+[0.291s] 
+[0.291s]     geometric_shapesConfig.cmake
+[0.291s]     geometric_shapes-config.cmake
+[0.291s] 
+[0.291s]   Add the installation prefix of "geometric_shapes" to CMAKE_PREFIX_PATH or
+[0.291s]   set "geometric_shapes_DIR" to a directory containing one of the above
+[0.291s]   files.  If "geometric_shapes" provides a separate development package or
+[0.291s]   SDK, be sure it has been installed.
+[0.291s] 
+[0.291s] [0m
+[0.291s] -- Configuring incomplete, errors occurred!
+[0.293s] Invoked command in '/home/falcon1/Desktop/ROS2_BA/build/moveit_visual_tools' returned '1': AMENT_PREFIX_PATH=/home/falcon1/Desktop/ROS2_BA/install/rviz_visual_tools:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/falcon1/Desktop/ROS2_BA/install/rviz_visual_tools:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/falcon1/Desktop/ROS2_BA/install/rviz_visual_tools/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/falcon1/Desktop/ROS2_BA/src/moveit_visual_tools -DCMAKE_INSTALL_PREFIX=/home/falcon1/Desktop/ROS2_BA/install/moveit_visual_tools

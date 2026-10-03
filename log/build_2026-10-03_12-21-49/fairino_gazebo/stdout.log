@@ -1,0 +1,98 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+-- Found PythonExtra: /usr/bin/python3  
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Configured 'flake8' exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (0.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/falcon1/Desktop/ROS2_BA/build/fairino_gazebo
+-- Install configuration: ""
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/launch
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/launch/fr5_gazebo.launch.py
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/launch/fr5_gazebo_moveit_base.launch.py
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/launch/__pycache__
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/launch/__pycache__/fr5_gazebo_moveit_base.launch.cpython-312.pyc
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/launch/__pycache__/fr5_gazebo.launch.cpython-312.pyc
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/config
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/config/moveit_xyz_control.yaml
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/config/pilz_cartesian_limits.yaml
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/config/joint_limits.yaml
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/config/initial_positions.yaml
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/config/ros2_controllers.yaml
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/config/kinematics.yaml
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/world
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/world/table_with_multipleblocks.sdf
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/world/magnetventil.sdf
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/world/table_with_largeblock.sdf
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/world/table_with_magnetventil.sdf
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/world/empty_world (Copy).sdf
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/world/table_with_cross.sdf
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/world/empty_world.sdf
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/world/new_target.sdf
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/world/table.sdf
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/fairino5_v6
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/fairino5_v6/model.sdf
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/new_target
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/new_target/meshes
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/new_target/meshes/new_target_in_mm.stl
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/new_target/meshes/new_target_in_m.stl
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/new_target/model.config
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/new_target/model.sdf
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/test
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/test/meshes
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/test/meshes/Magnetventil_inch.stl
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/test/meshes/Magnetventil_mm.stl
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/test/model.config
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/test/model.sdf
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/magnetventil
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/magnetventil/meshes
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/magnetventil/meshes/Magnetventil_inch.stl
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/magnetventil/meshes/Magnetventil_mm.stl
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/magnetventil/model.config
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/magnetventil/model.sdf
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/automover
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/automover/meshes
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/automover/meshes/automover_m.stl
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/automover/meshes/automover_mm.stl
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/automover/model.config
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/models/automover/model.sdf
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/urdf
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/urdf/fairino5_v6_macro.xacro
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/urdf/fairino_gazebo.xacro
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/urdf/depth_camera.xacro
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/urdf/fairino5_v6_robot.urdf.xacro
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/urdf/fairino5_v6_robot.ros2_control.xacro
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/lib/fairino_gazebo/save_robot_pose.py
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/ament_index/resource_index/package_run_dependencies/fairino_gazebo
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/ament_index/resource_index/parent_prefix_path/fairino_gazebo
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/environment/ament_prefix_path.sh
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/environment/ament_prefix_path.dsv
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/environment/path.sh
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/environment/path.dsv
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/local_setup.bash
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/local_setup.sh
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/local_setup.zsh
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/local_setup.dsv
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/package.dsv
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/ament_index/resource_index/packages/fairino_gazebo
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/cmake/fairino_gazeboConfig.cmake
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/cmake/fairino_gazeboConfig-version.cmake
+-- Installing: /home/falcon1/Desktop/ROS2_BA/install/fairino_gazebo/share/fairino_gazebo/package.xml
