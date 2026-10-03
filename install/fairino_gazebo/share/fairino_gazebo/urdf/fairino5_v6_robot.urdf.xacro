@@ -37,6 +37,14 @@
     <!-- Added environment: Tisch + cylinders + re-root base_link   -->
     <!-- ========================================================= -->
 
+
+    <link name="world"/>
+
+    <joint name="world_to_tisch" type="fixed">
+        <parent link="world"/>
+        <child link="Tisch"/>
+    </joint>
+
     <!-- ===== Added cylinder link under base_link (actually parent of base_link) ===== -->
     <link name="zylinder_base">
         <inertial>
