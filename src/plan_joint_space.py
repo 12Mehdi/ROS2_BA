@@ -1,7 +1,9 @@
+import sys
 import rclpy
 from sensor_msgs.msg import JointState
 from moveit_msgs.srv import GetMotionPlan
 from moveit_msgs.msg import Constraints, JointConstraint
+from goals import GOALS
 
 ARM = [f"j{i}" for i in range(1, 7)]      # FR5: j1..j6
 GROUP = "fairino5_v6_group"
@@ -20,7 +22,7 @@ def get_current_joints(joint_names=ARM, timeout_sec=5.0):
         for n, p in zip(msg.name, msg.position):
             result[n] = p
 
-    sub = node.create_subscription(JointState, "/joint_states", cb, 10)
+    node.create_subscription(JointState, "/joint_states", cb, 10)
 
     end_time = node.get_clock().now().nanoseconds + int(timeout_sec * 1e9)
     while node.get_clock().now().nanoseconds < end_time:
@@ -37,7 +39,7 @@ def get_current_joints(joint_names=ARM, timeout_sec=5.0):
 
 
 def plan_waypoints(start, goal, planner_id="", group=GROUP,
-                    joint_names=ARM, planning_time=5.0):
+                   joint_names=ARM, planning_time=5.0):
     """Ask MoveIt (OMPL inside) for a path between two joint-space poses.
 
     start, goal: lists of 6 joint angles (radians), in joint_names order
@@ -59,7 +61,7 @@ def plan_waypoints(start, goal, planner_id="", group=GROUP,
     r.planner_id = planner_id            # "" = default planner
     r.group_name = group
     r.allowed_planning_time = planning_time
-    r.num_planning_attempts = 1
+    r.num_planning_attempts = 10
     r.start_state.joint_state.name = joint_names
     r.start_state.joint_state.position = list(start)
 
@@ -87,25 +89,46 @@ def plan_waypoints(start, goal, planner_id="", group=GROUP,
     return [list(p.positions) for p in pts]   # positions only, no timing
 
 
+def print_available_goals():
+    print("Available goals (from goals.py):")
+    for name in GOALS:
+        print("  -", name)
+
+
 if __name__ == "__main__":
+    # Usage:
+    #   python3 plan_joint_space.py pick              -> current pose to "pick"
+    #   python3 plan_joint_space.py pick place home   -> chain of goals
+    names = sys.argv[1:]
+
+    if not names:
+        print("Please give at least one goal name.")
+        print_available_goals()
+        sys.exit(1)
+
+    unknown = [n for n in names if n not in GOALS]
+    if unknown:
+        print("Unknown goal(s):", ", ".join(unknown))
+        print_available_goals()
+        sys.exit(1)
+
     print("Reading current joint state...")
-    START = get_current_joints()
-
-    if START is None:
+    start = get_current_joints()
+    if start is None:
         print("Could not read current joint state. Is /joint_states being published?")
-    else:
-        print("Start (current):", START)
+        sys.exit(1)
+    print("Start (current):", start)
 
-        # EDIT: your goal pose (radians, j1..j6)
-        GOAL = [0.7854, -1.5708, 1.5708, 0.0, 1.5708, 0.0]
-
-        print("Goal:", GOAL)
-        print("Planning path...")
-
-        wp = plan_waypoints(START, GOAL)
+    all_paths = {}
+    for name in names:
+        goal = GOALS[name]
+        print(f"\nPlanning to '{name}': {goal}")
+        wp = plan_waypoints(start, goal, planner_id="RRTConnectkConfigDefault") 
         if wp is None:
-            print("Planning failed")
-        else:
-            print(f"Got {len(wp)} waypoints")
-            for i, p in enumerate(wp):
-                print(i, p)
+            print(f"Planning to '{name}' failed, stopping here.")
+            break
+        print(f"Got {len(wp)} waypoints")
+        for i, p in enumerate(wp):
+            print(i, p)
+        all_paths[name] = wp
+        start = wp[-1]     # next segment starts where this one ended
