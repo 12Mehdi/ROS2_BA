@@ -30,8 +30,7 @@ def _apply(objects):
     return ok
 
 
-
-def add_box(name, position, size, frame="Tisch",
+def add_box(name, position, size, frame="table_surface",
             orientation=(0.0, 0.0, 0.0, 1.0)):
     """Add (or move) a box obstacle.
 
