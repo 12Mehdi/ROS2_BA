@@ -261,6 +261,17 @@
         <child link="zylinder_5_link"/>
         <origin xyz="-1.5 0.6 0.675" rpy="0 0 0"/>
     </joint>
+
+    <!-- Reference frame at the table surface (0.5 m above Tisch's center), used to mount the robot so its base sits exactly on the tabletop instead of at the table's geometric center -->
+
+    <link name="table_surface"/>
+
+    <joint name="tisch_to_surface" type="fixed">
+        <parent link="Tisch"/>
+        <child link="table_surface"/>
+        <origin xyz="0 0 0.5" rpy="0 0 0"/>
+    </joint>
+
     <!-- ===== End added Tisch ===== -->
 
     <!-- ========================================================= -->
