@@ -97,7 +97,7 @@ if __name__ == "__main__":
         print("Start (current):", START)
 
         # EDIT: your goal pose (radians, j1..j6)
-        GOAL = [0.7854, -0.3927, 0.7854, -1.0472, -1.0472, 0.0]
+        GOAL = [0.7854, -1.5708, 1.5708, 0.0, 1.5708, 0.0]
 
         print("Goal:", GOAL)
         print("Planning path...")

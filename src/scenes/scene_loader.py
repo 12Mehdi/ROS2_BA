@@ -3,6 +3,7 @@ from geometry_msgs.msg import Pose
 from moveit_msgs.msg import CollisionObject
 from moveit_msgs.srv import ApplyPlanningScene
 from shape_msgs.msg import SolidPrimitive
+from scenes import SCENES
 
 
 # ---------- low-level helpers ----------
@@ -63,23 +64,6 @@ def remove_box(name, frame="Tisch"):
     obj.id = name
     obj.operation = CollisionObject.REMOVE
     return _apply([obj])
-
-
-# ---------- named scenes ----------
-# Define your obstacle sets here. Add as many as you like.
-
-SCENES = {
-    "empty": [],
-    "stage_a": [   # before obstacle update
-        {"name": "box1", "position": (-1, -0.3, 2.00001), "size": (0.9, 0.1, 3)},
-        {"name": "box2", "position": (0, 0, 0.800001), "size": (0.5, 0.5, 0.6)},
-    ],
-    "stage_b": [   # after obstacle update (Stage B test case)
-        {"name": "box1", "position": (0.5, 0.3, 0.3), "size": (0.2, 0.2, 0.2)},
-        {"name": "box2", "position": (0.3, -0.2, 0.4), "size": (0.15, 0.15, 0.4)},
-        {"name": "box3", "position": (0.5, 0.0, 0.55), "size": (0.2, 0.2, 0.2)},
-    ],
-}
 
 
 def load_scene(name):
