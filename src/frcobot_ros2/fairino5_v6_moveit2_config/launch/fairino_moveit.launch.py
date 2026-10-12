@@ -78,6 +78,10 @@ def launch_setup(context, *args, **kwargs):
         .trajectory_execution(file_path=moveit_controllers_path)
         .planning_scene_monitor(publish_robot_description=True, publish_robot_description_semantic=True)
         .joint_limits(file_path=joint_limits_path)
+        .planning_pipelines(
+            pipelines=["ompl", "chomp", "stomp", "pilz_industrial_motion_planner", "ompl_raw"],
+            default_planning_pipeline="ompl",
+        )
         .to_moveit_configs()
     )
 
