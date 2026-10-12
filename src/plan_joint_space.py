@@ -4,6 +4,7 @@ from sensor_msgs.msg import JointState
 from moveit_msgs.srv import GetMotionPlan
 from moveit_msgs.msg import Constraints, JointConstraint
 from goals import GOALS
+from path_io import save_path, get_obstacles
 
 ARM = [f"j{i}" for i in range(1, 7)]      # FR5: j1..j6
 GROUP = "fairino5_v6_group"
@@ -57,13 +58,21 @@ def plan_waypoints(start, goal, planner_id="", group=GROUP,
 
     req = GetMotionPlan.Request()
     r = req.motion_plan_request
-    r.pipeline_id = "ompl"
+    r.pipeline_id = "ompl_raw"
+    r.max_velocity_scaling_factor = 1.0
+    r.max_acceleration_scaling_factor = 1.0
     r.planner_id = planner_id            # "" = default planner
     r.group_name = group
     r.allowed_planning_time = planning_time
     r.num_planning_attempts = 10
     r.start_state.joint_state.name = joint_names
     r.start_state.joint_state.position = list(start)
+
+    # Workspace box (only affects mobile bases; set to silence the warning)
+    ws = r.workspace_parameters
+    ws.header.frame_id = "base_link"
+    ws.min_corner.x = ws.min_corner.y = ws.min_corner.z = -4.0
+    ws.max_corner.x = ws.max_corner.y = ws.max_corner.z = 4.0
 
     c = Constraints()
     for n, v in zip(joint_names, goal):
@@ -131,4 +140,12 @@ if __name__ == "__main__":
         for i, p in enumerate(wp):
             print(i, p)
         all_paths[name] = wp
+        file = save_path(
+            wp, start, goal, name, ARM,
+            pipeline="ompl_raw",
+            planner_id="RRTConnectkConfigDefault",
+            group=GROUP,
+            obstacles=get_obstacles(),
+        )
+        print("Saved to", file)
         start = wp[-1]     # next segment starts where this one ended
