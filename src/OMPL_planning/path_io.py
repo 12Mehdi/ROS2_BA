@@ -12,6 +12,7 @@ from datetime import datetime
 import rclpy
 from moveit_msgs.msg import PlanningSceneComponents
 from moveit_msgs.srv import GetPlanningScene
+PATHS_DIR = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "paths_ompl"))
 
 FORMAT_VERSION = 1
 PRIMITIVE_TYPES = {1: "box", 2: "sphere", 3: "cylinder", 4: "cone"}
@@ -80,7 +81,7 @@ def _git_commit():
 
 def save_path(waypoints, start, goal, goal_name, joint_names, *,
               pipeline, planner_id, group, start_name="current",
-              obstacles=None, folder="paths", note=""):
+              obstacles=None, folder=PATHS_DIR, note=""):
     """Write one planned path to paths/<timestamp>_<start>_to_<goal>.json
     and return the file path."""
     os.makedirs(folder, exist_ok=True)

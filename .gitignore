@@ -3,3 +3,6 @@ install/
 log/
 src/__pycache__/
 src/scenes/__pycache__/
+__pycache__/
+src/paths_ompl/*.png
+src/b_splines_traj/*.png
