@@ -3,10 +3,10 @@ from geometry_msgs.msg import Pose
 from moveit_msgs.msg import CollisionObject
 from moveit_msgs.srv import ApplyPlanningScene
 from shape_msgs.msg import SolidPrimitive
-from scenes import SCENES
-
+from my_code.scenes.scenes import SCENES
 
 # ---------- low-level helpers ----------
+
 
 def _apply(objects):
     """Send a list of collision objects to MoveIt's planning scene."""
@@ -20,7 +20,7 @@ def _apply(objects):
         return False
 
     req = ApplyPlanningScene.Request()
-    req.scene.is_diff = True          # change the scene, don't replace it
+    req.scene.is_diff = True  # change the scene, don't replace it
     req.scene.world.collision_objects = objects
 
     future = client.call_async(req)
@@ -30,8 +30,9 @@ def _apply(objects):
     return ok
 
 
-def add_box(name, position, size, frame="table_surface",
-            orientation=(0.0, 0.0, 0.0, 1.0)):
+def add_box(
+    name, position, size, frame="table_surface", orientation=(0.0, 0.0, 0.0, 1.0)
+):
     """Add (or move) a box obstacle.
 
     position: (x, y, z) of the box centre, in metres, in the robot base frame
@@ -47,8 +48,9 @@ def add_box(name, position, size, frame="table_surface",
 
     pose = Pose()
     pose.position.x, pose.position.y, pose.position.z = [float(p) for p in position]
-    (pose.orientation.x, pose.orientation.y,
-     pose.orientation.z, pose.orientation.w) = orientation
+    pose.orientation.x, pose.orientation.y, pose.orientation.z, pose.orientation.w = (
+        orientation
+    )
 
     obj.primitives.append(shape)
     obj.primitive_poses.append(pose)
@@ -81,4 +83,5 @@ def clear_scene(name):
 
 if __name__ == "__main__":
     import sys
+
     load_scene(sys.argv[1] if len(sys.argv) > 1 else "single_box")

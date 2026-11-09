@@ -3,10 +3,10 @@ import rclpy
 from sensor_msgs.msg import JointState
 from moveit_msgs.srv import GetMotionPlan
 from moveit_msgs.msg import Constraints, JointConstraint
-from goals import GOALS
-from path_io import save_path, get_obstacles
+from my_code.OMPL_planning.goals import GOALS
+from my_code.OMPL_planning.path_io import save_path, get_obstacles
 
-ARM = [f"j{i}" for i in range(1, 7)]      # FR5: j1..j6
+ARM = [f"j{i}" for i in range(1, 7)]  # FR5: j1..j6
 GROUP = "fairino5_v6_group"
 
 
@@ -39,8 +39,9 @@ def get_current_joints(joint_names=ARM, timeout_sec=5.0):
     return [result[n] for n in joint_names]
 
 
-def plan_waypoints(start, goal, planner_id="", group=GROUP,
-                   joint_names=ARM, planning_time=5.0):
+def plan_waypoints(
+    start, goal, planner_id="", group=GROUP, joint_names=ARM, planning_time=5.0
+):
     """Ask MoveIt (OMPL inside) for a path between two joint-space poses.
 
     start, goal: lists of 6 joint angles (radians), in joint_names order
@@ -61,7 +62,7 @@ def plan_waypoints(start, goal, planner_id="", group=GROUP,
     r.pipeline_id = "ompl_raw"
     r.max_velocity_scaling_factor = 1.0
     r.max_acceleration_scaling_factor = 1.0
-    r.planner_id = planner_id            # "" = default planner
+    r.planner_id = planner_id  # "" = default planner
     r.group_name = group
     r.allowed_planning_time = planning_time
     r.num_planning_attempts = 10
@@ -95,7 +96,7 @@ def plan_waypoints(start, goal, planner_id="", group=GROUP,
         return None
 
     pts = res.trajectory.joint_trajectory.points
-    return [list(p.positions) for p in pts]   # positions only, no timing
+    return [list(p.positions) for p in pts]  # positions only, no timing
 
 
 def print_available_goals():
@@ -132,7 +133,7 @@ if __name__ == "__main__":
     for name in names:
         goal = GOALS[name]
         print(f"\nPlanning to '{name}': {goal}")
-        wp = plan_waypoints(start, goal, planner_id="RRTConnectkConfigDefault") 
+        wp = plan_waypoints(start, goal, planner_id="RRTConnectkConfigDefault")
         if wp is None:
             print(f"Planning to '{name}' failed, stopping here.")
             break
@@ -141,11 +142,15 @@ if __name__ == "__main__":
             print(i, p)
         all_paths[name] = wp
         file = save_path(
-            wp, start, goal, name, ARM,
+            wp,
+            start,
+            goal,
+            name,
+            ARM,
             pipeline="ompl_raw",
             planner_id="RRTConnectkConfigDefault",
             group=GROUP,
             obstacles=get_obstacles(),
         )
         print("Saved to", file)
-        start = wp[-1]     # next segment starts where this one ended
+        start = wp[-1]  # next segment starts where this one ended

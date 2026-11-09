@@ -11,13 +11,14 @@ There is no time axis yet: the raw path has no timing. The x-axis is either
 the waypoint number or the joint-space path length s (sum of straight-line
 distances between waypoints, in rad), which shows how long each segment is.
 """
+
 import argparse
 import math
 import os
 
 import matplotlib.pyplot as plt
 
-from path_io import load_path
+from my_code.OMPL_planning.path_io import load_path
 
 
 def path_length_axis(waypoints):
@@ -53,15 +54,18 @@ def main():
     for j, (ax, name) in enumerate(zip(axes, names)):
         y = [conv(w[j]) for w in wps]
         ax.plot(x, y, "-o", color="tab:blue", markersize=5, label="waypoints")
-        ax.axhline(conv(goal[j]), color="tab:gray", linestyle="--", linewidth=1,
-                   label="goal")
+        ax.axhline(
+            conv(goal[j]), color="tab:gray", linestyle="--", linewidth=1, label="goal"
+        )
         ax.set_ylabel(f"{name} [{unit}]")
         ax.grid(True, alpha=0.3)
     axes[0].legend(loc="best", fontsize=8)
     axes[-1].set_xlabel(xlabel)
 
-    title = f"{data['start']['name']} -> {data['goal']['name']}  |  " \
-            f"{data['num_waypoints']} waypoints  |  {data['pipeline']}"
+    title = (
+        f"{data['start']['name']} -> {data['goal']['name']}  |  "
+        f"{data['num_waypoints']} waypoints  |  {data['pipeline']}"
+    )
     if data["obstacles"]:
         title += f"  |  {len(data['obstacles'])} obstacle(s)"
     fig.suptitle(title, fontsize=10)
