@@ -6,3 +6,4 @@ log/
 __pycache__/
 /src/my_code/b_splines_traj
 .vscode/
+.prettierignore

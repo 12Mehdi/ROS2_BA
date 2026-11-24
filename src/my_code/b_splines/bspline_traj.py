@@ -8,33 +8,6 @@ Run it to build a trajectory from a saved path and export ALL values to JSON:
   --degree: spline degree (default 4).
   --dt:     sampling step of the exported grid in seconds (default 0.002).
   --out:    output file (default: src/trajectories/<path name>_deg<degree>.json).
-Then plot it with plot_traj.py, or load it in a test script (no ROS needed):
-    from bspline_traj import load_trajectory
-    s = load_trajectory("trajectories/<file>.json")   # same dict as sample()
-
-Decision variables (option 1): the segment durations dts = [dt_1, ..., dt_n],
-one per segment between consecutive waypoints.
-
-For every joint the spline
-  - passes exactly through every waypoint, at time t_k = dt_1 + ... + dt_k,
-  - has the chosen degree p (default 4; p >= 4 gives a continuous jerk),
-  - starts and ends at rest.
-
-Knots and extra conditions depend on whether the degree is odd or even:
-
-  odd p   knots AT the interior waypoints        -> p - 1 extra conditions
-  even p  knots in the MIDDLE of every segment   -> p     extra conditions
-
-Both cases give an even number of conditions, which is split evenly between
-the two ends. At each end the first c/2 derivatives are set to zero:
-
-  p = 3         velocity = 0 at both ends
-  p = 4, 5      velocity = acceleration = 0 at both ends
-  p = 6, 7      velocity = acceleration = jerk = 0 at both ends
-
-Reference: Biagiotti & Melchiorri (2008), Sec. 4.5 "B-spline functions for
-trajectories with high degree of continuity". Check the exact statement on
-knot placement and extra conditions there before citing it.
 """
 
 import argparse
